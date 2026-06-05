@@ -25,7 +25,9 @@ int print(HashMap *map) {
 }
 
 int get(char *key, HashMap *map) {
+
   int location = hash(key);
+
   return map->age[location];
 }
 
@@ -79,9 +81,8 @@ int main(int argc, char *argv[]) {
   add("Roshan", 18, map);
   add("Vision", 18, map);
 
-  printf("%d\n", get("Daya", map));
-
   print(map);
+  printf("Bimin's age is %d\n", get("Bimin", map));
 
   return EXIT_SUCCESS;
 }
