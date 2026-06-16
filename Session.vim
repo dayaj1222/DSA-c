@@ -24,11 +24,12 @@ badd +11 recursion/hanoi.c
 badd +16 recursion/binary_search.c
 badd +20 recursion/merge_sort.c
 badd +1 recursion/stairs.c
+badd +1 dijkstra.c
 argglobal
 %argdel
-edit recursion/stairs.c
+edit dijkstra.c
 argglobal
-balt recursion/merge_sort.c
+balt recursion/stairs.c
 setlocal foldmethod=manual
 setlocal foldexpr=0
 setlocal foldmarker={{{,}}}
@@ -39,11 +40,11 @@ setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 18) / 37)
+let s:l = 65 - ((13 * winheight(0) + 19) / 39)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 65
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
