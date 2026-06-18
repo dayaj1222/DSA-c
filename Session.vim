@@ -24,12 +24,18 @@ badd +11 recursion/hanoi.c
 badd +16 recursion/binary_search.c
 badd +20 recursion/merge_sort.c
 badd +1 recursion/stairs.c
-badd +1 dijkstra.c
+badd +53 dijkstra.c
+badd +63 temp.c
+badd +1 recursion/longest_common_subsequence.c
+badd +37 recursion/longest_common_subsequence_DP_bottom_up.c
+badd +12 recursion/longest_common_subsequence_DP_top_down.c
+badd +3 test.c
+badd +21 subsets.c
 argglobal
 %argdel
-edit dijkstra.c
+edit recursion/longest_common_subsequence_DP_top_down.c
 argglobal
-balt recursion/stairs.c
+balt subsets.c
 setlocal foldmethod=manual
 setlocal foldexpr=0
 setlocal foldmarker={{{,}}}
@@ -40,12 +46,12 @@ setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 65 - ((13 * winheight(0) + 19) / 39)
+let s:l = 15 - ((14 * winheight(0) + 19) / 39)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 65
-normal! 0
+keepjumps 15
+normal! 023|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

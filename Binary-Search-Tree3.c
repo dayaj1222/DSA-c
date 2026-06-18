@@ -8,10 +8,8 @@ typedef struct Node {
   struct Node *right;
 } Node;
 
-Node *
-Insert(Node *root,
-       int v) { // Primise to return the passed node with new value attached
-
+// Promise to return the passed node with new value attached
+Node *Insert(Node *root, int v) {
   if (root == NULL) {
     Node *newnode = malloc(sizeof(Node));
     newnode->dat = v;

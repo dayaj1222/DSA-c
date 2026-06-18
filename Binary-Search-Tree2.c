@@ -52,7 +52,7 @@ Node *Delete(Node *root, int val) {
       Node *tmp = root->right;
       free(root);
       return tmp;
-    } else if (root->left == NULL) {
+    } else if (root->right == NULL) {
       Node *tmp = root->left;
       free(root);
       return tmp;
